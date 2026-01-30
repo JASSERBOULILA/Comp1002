@@ -10,14 +10,13 @@
 
   <body>
     <!--
-      HEADER contains the site identity (name) + primary navigation.
-      Using <header> and <nav> improves semantic meaning for screen readers.
+      creating the header for the head of the website and the navigation bar and the some information about me 
     -->
     <header>
       <div class="container">
         <h1>Jasser Boulila</h1>
 
-        <!-- Primary navigation: descriptive links that jump to sections -->
+        <!-- navigation bar -->
         <nav aria-label="Primary">
           <ul>
             <li><a href="#summary">Professional Summary</a></li>
@@ -39,7 +38,11 @@
           </p>
           <p>
             <!-- Descriptive link text helps accessibility -->
-            <a href="https://jasserboulila.github.io/" target="_blank" rel="noopener">
+            <a
+              href="https://jasserboulila.github.io/"
+              target="_blank"
+              rel="noopener"
+            >
               View my portfolio website
             </a>
           </p>
@@ -48,28 +51,25 @@
     </header>
 
     <!--
-      MAIN contains the primary content of the page.
-      Each resume area is a <section> with a clear heading.
+     Main contain the main content of the resume 
     -->
     <main class="container">
       <!-- SUMMARY -->
       <section id="summary" aria-labelledby="summary-heading">
         <h2 id="summary-heading">Professional Summary</h2>
         <p>
-          Full Stack Developer with 2+ years of experience building web applications using
-          Angular, React, Node.js, Java, and Ionic. Fast learner, team-oriented, and focused
-          on clean code, usability, and reliable features.
+          Full Stack Developer with 2+ years of experience building web
+          applications using Angular, React, Node.js, Java, and Ionic. Fast
+          learner, team-oriented, and focused on clean code, usability, and
+          reliable features.
         </p>
       </section>
 
       <!-- SKILLS -->
       <section id="skills" aria-labelledby="skills-heading">
         <h2 id="skills-heading">Skills</h2>
-
         <!--
-          Using <article> blocks for grouped content makes the structure clearer.
-          Each article could represent a skill category.
-        -->
+          using the article to display each my skills and tools i have used during my career  -->
         <article aria-labelledby="skills-dev">
           <h3 id="skills-dev">Development</h3>
           <ul>
@@ -102,12 +102,20 @@
           <h3>Full Stack Developer — HippomedAI</h3>
           <p>
             <time datetime="2024-01">Jan 2024</time> –
-            <time datetime="2024-08">Aug 2024</time>
+            <time datetime="2024-08">Aug 2025</time>
           </p>
           <ul>
-            <li>Built ERP features for healthcare using Angular/React and Node.js/Java.</li>
-            <li>Created REST APIs and integrated frontend screens with backend services.</li>
-            <li>Improved UI consistency and maintained clean, readable code.</li>
+            <li>
+              Built ERP features for healthcare using Angular/React and
+              Node.js/Java (not javascript).
+            </li>
+            <li>
+              Created REST APIs and integrated frontend screens with backend
+              services.
+            </li>
+            <li>
+              Improved UI consistency and maintained clean, readable code.
+            </li>
           </ul>
         </article>
 
@@ -127,6 +135,13 @@
       <!-- EDUCATION -->
       <section id="education" aria-labelledby="education-heading">
         <h2 id="education-heading">Education</h2>
+        <article>
+          <h3>Coding Dojo </h3>
+          <p>
+            <time datetime="2026-01-05">Starting: Aug 8 , 2023</time>
+          </p>
+          <p>Full stack web development</p>
+        </article>
 
         <article>
           <h3>Georgian College — Computer Programming</h3>
@@ -142,13 +157,13 @@
         <h2 id="projects-heading">Projects</h2>
 
         <!--
-          Projects are also good as <article> entries.
-          Use descriptive link text (avoid "click here").
+          some of the project i did during my study
         -->
         <article>
-          <h3>E-commerce Web App</h3>
+          <h3>E-commerce Web App(<a href="https://techcity.tn/">Tech City</a>)</h3>
           <p>
-            Built a full-stack e-commerce app with authentication, admin panel, orders, and packs.
+            Built a full-stack e-commerce app with authentication, admin panel,
+            orders, and packs.
           </p>
           <ul>
             <li>Frontend: React + Tailwind CSS</li>
@@ -157,12 +172,12 @@
         </article>
 
         <article>
-          <h3>Car Wash Booking App (Mobile)</h3>
+          <h3>SBH GLORY (<a href="https://sbh-glory.com/">SBH GLORY</a>)</h3>
           <p>
-            A Flutter-based SaaS app to find nearby car washes and make appointments.
+            A Web application for a client to preview his export and import company
           </p>
           <ul>
-            <li>Features: appointments, cars list, freelancer contact flow</li>
+            <li>Frontend  : Html + Scss</li>
           </ul>
         </article>
       </section>
@@ -172,9 +187,7 @@
         <h2 id="contact-heading">Contact</h2>
 
         <!--
-          A basic contact form shows structure and accessibility.
-          Labels are required for accessibility; inputs use name/id.
-          action can stay "#" for assignment (no backend needed).
+          used the form for the contact section
         -->
         <form action="#" method="post">
           <fieldset>
@@ -182,17 +195,34 @@
 
             <div>
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
             </div>
 
             <div>
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
             </div>
 
             <div>
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
             </div>
 
             <button type="submit">Send</button>
@@ -207,7 +237,7 @@
     </main>
 
     <!--
-      FOOTER contains secondary info, copyright, and can repeat key links.
+      Footer
     -->
     <footer>
       <div class="container">
