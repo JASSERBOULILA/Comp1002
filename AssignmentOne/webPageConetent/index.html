@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic page metadata for accessibility + responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jasser Boulila - Resume</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+
+  <body>
+    <!--
+      HEADER contains the site identity (name) + primary navigation.
+      Using <header> and <nav> improves semantic meaning for screen readers.
+    -->
+    <header>
+      <div class="container">
+        <h1>Jasser Boulila</h1>
+
+        <!-- Primary navigation: descriptive links that jump to sections -->
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#summary">Professional Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact details are important resume info; <address> is semantic -->
+        <address>
+          <p>Barrie, Ontario, Canada</p>
+          <p>
+            <a href="mailto:jasserboulila@proton.me">jasserboulila@proton.me</a>
+            |
+            <a href="tel:+19426605588">+1 (942) 660-5588</a>
+          </p>
+          <p>
+            <!-- Descriptive link text helps accessibility -->
+            <a href="https://jasserboulila.github.io/" target="_blank" rel="noopener">
+              View my portfolio website
+            </a>
+          </p>
+        </address>
+      </div>
+    </header>
+
+    <!--
+      MAIN contains the primary content of the page.
+      Each resume area is a <section> with a clear heading.
+    -->
+    <main class="container">
+      <!-- SUMMARY -->
+      <section id="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Professional Summary</h2>
+        <p>
+          Full Stack Developer with 2+ years of experience building web applications using
+          Angular, React, Node.js, Java, and Ionic. Fast learner, team-oriented, and focused
+          on clean code, usability, and reliable features.
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+
+        <!--
+          Using <article> blocks for grouped content makes the structure clearer.
+          Each article could represent a skill category.
+        -->
+        <article aria-labelledby="skills-dev">
+          <h3 id="skills-dev">Development</h3>
+          <ul>
+            <li>HTML5, CSS3, JavaScript, TypeScript</li>
+            <li>React, Angular, Ionic</li>
+            <li>Node.js (Express), Java (Spring Boot)</li>
+            <li>REST APIs, Authentication (JWT)</li>
+          </ul>
+        </article>
+
+        <article aria-labelledby="skills-db">
+          <h3 id="skills-db">Databases & Tools</h3>
+          <ul>
+            <li>MongoDB (Mongoose), MySQL</li>
+            <li>Git & GitHub, Postman</li>
+            <li>Basic SEO, Responsive Design</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Work Experience</h2>
+
+        <!--
+          Each job is an <article> because it is a standalone piece of content.
+          Time is marked with <time> to provide semantic meaning.
+        -->
+        <article>
+          <h3>Full Stack Developer — HippomedAI</h3>
+          <p>
+            <time datetime="2024-01">Jan 2024</time> –
+            <time datetime="2024-08">Aug 2024</time>
+          </p>
+          <ul>
+            <li>Built ERP features for healthcare using Angular/React and Node.js/Java.</li>
+            <li>Created REST APIs and integrated frontend screens with backend services.</li>
+            <li>Improved UI consistency and maintained clean, readable code.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Full Stack Developer Intern — BNA (Internship)</h3>
+          <p>
+            <time datetime="2023-06">Jun 2023</time> –
+            <time datetime="2023-09">Sep 2023</time>
+          </p>
+          <ul>
+            <li>Developed features and assisted with debugging and testing.</li>
+            <li>Worked with a team using Git and basic agile workflow.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+
+        <article>
+          <h3>Georgian College — Computer Programming</h3>
+          <p>
+            <time datetime="2026-01-05">Starting: Jan 5, 2026</time>
+          </p>
+          <p>Program: Computer Programming (DEP)</p>
+        </article>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <!--
+          Projects are also good as <article> entries.
+          Use descriptive link text (avoid "click here").
+        -->
+        <article>
+          <h3>E-commerce Web App</h3>
+          <p>
+            Built a full-stack e-commerce app with authentication, admin panel, orders, and packs.
+          </p>
+          <ul>
+            <li>Frontend: React + Tailwind CSS</li>
+            <li>Backend: Node.js / APIs</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Car Wash Booking App (Mobile)</h3>
+          <p>
+            A Flutter-based SaaS app to find nearby car washes and make appointments.
+          </p>
+          <ul>
+            <li>Features: appointments, cars list, freelancer contact flow</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+
+        <!--
+          A basic contact form shows structure and accessibility.
+          Labels are required for accessibility; inputs use name/id.
+          action can stay "#" for assignment (no backend needed).
+        -->
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Send me a message</legend>
+
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Send</button>
+          </fieldset>
+        </form>
+
+        <p>
+          Or email me directly:
+          <a href="mailto:jasserboulila@proton.me">jasserboulila@proton.me</a>
+        </p>
+      </section>
+    </main>
+
+    <!--
+      FOOTER contains secondary info, copyright, and can repeat key links.
+    -->
+    <footer>
+      <div class="container">
+        <p>© <time datetime="2026">2026</time> Jasser Boulila</p>
+      </div>
+    </footer>
+  </body>
+</html>
