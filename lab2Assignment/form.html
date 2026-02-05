@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+
+  <body>
+    <main id="main">
+      <form action="#" method="post">
+        <header id="headerwithliner">
+          <h1>User Registration Form</h1>
+
+          <div id="theLineBreak"></div>
+        </header>
+        <fieldset id="fieldset">
+          <div>
+            <label for="firstName">Full Name:</label>
+
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="First Name"
+              required
+              autocomplete="given-name"
+            />
+          </div>
+
+          <div>
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Last Name"
+              required
+              autocomplete="family-name"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div>
+            <label for="email">Email Address:</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div>
+            <label for="password">Password:</label>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Min. 8 characters"
+              minlength="8"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div>
+            <label for="confirmPassword">Confirm Password:</label>
+
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Retype password"
+              minlength="8"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div>
+            <label for="dob">Date of Birth:</label>
+
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              required
+              autocomplete="bday"
+            />
+          </div>
+          <div id="gender">
+            <legend>Gender:</legend>
+
+            <label>
+              <input type="radio" name="gender" value="male" required />
+              Male
+            </label>
+
+            <label>
+              <input type="radio" name="gender" value="female" />
+              Female
+            </label>
+
+            <label>
+              <input type="radio" name="gender" value="other" />
+              Other
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+
+          <label>
+            <input type="checkbox" name="subscribeNewsletter" value="yes" />
+            Subscribe to Newsletter
+          </label>
+
+          <br />
+
+          <label>
+            <input type="checkbox" name="agreeTerms" value="yes" required />
+            I agree to the
+            <a href="#" target="_blank">Terms &amp; Conditions</a>
+          </label>
+        </fieldset>
+
+        <fieldset>
+
+          <div>
+            <label for="country">Country:</label>
+
+            <select id="country" name="country" required>
+              <option value="">Select Country</option>
+              <option value="canada">Canada</option>
+              <option value="tunisia">Tunisia</option>
+              <option value="usa">United States</option>
+              <option value="france">France</option>
+              <option value="italy">Italy</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+
+          <div>
+            <label for="comments">Comments:</label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              cols="40"
+              placeholder="Any additional comments..."
+              maxlength="500"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
