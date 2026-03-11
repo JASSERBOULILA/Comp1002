@@ -1,0 +1,173 @@
+/* BASE.CSS
+   This file NEVER changes.
+   It contains only visual styling — not layout systems.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f7fb;
+  color: #111;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #dfe3ea;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.site-header {
+  background: #111;
+  color: white;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav a {
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.site-footer {
+  background: #111;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #dfe3ea;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+/* Layout */ 
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem auto;
+}
+
+/* Your Code Here! */ 
+
+.cards{
+  /* grid layout */
+  display: grid;
+  /* used the grid-template-columns to create a 3 column layout with the repeat function to prevent me from  writing grid-template-columns: 350px 350px 350px;
+  */
+  grid-template-columns: repeat(3, 1fr);
+  /*used gap to add space between the cards*/
+  gap: 20px;
+}
+
+/* i created this to make the first card take up the entire width
+  of the first row 
+*/
+
+.card:nth-child(1){
+  grid-column:1 / -1;
+}
+
+/*
+  i created this to make the 5th card take up 2/3 of the space following the last card
+  as mentioned in the assignment
+*/
+.card:nth-child(5){
+  grid-column: span 2;
+}
+
+/* Bonus Challenge - 2 EXTRA marks */ 
+/* make the layout responsive & mobile first design */ 
+
+/* i used the media queries to make the layout responsive for the tablet and mobile devices*/
+
+/* Tablet  responsive*/
+@media (max-width: 900px) {
+
+  /*stack the main layout instead of two columns change it to single*/
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  /*show the cards instead of three columns in a row we changed it to two columns*/
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* nothing changed for the first card still takes up the entire width*/
+  .card:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+
+  /*we changed the 5th card to take up the entire width instead of 2/3 of the space*/
+  .card:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* mobile responisve*/
+@media (max-width: 600px) {
+
+  /*
+    stack the heade-inner items vertically instead of horizontally for smalls screens devices
+  */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /*  removed the spacing between the navigation links*/
+  .nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+
+  /*  stack all the cards in a single column instead of three*/
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* make the first card and the 5th card  set it to auto reset it to make it behave with the width automatically */
+  .card:nth-child(1),
+  .card:nth-child(5) {
+    grid-column: auto;
+  }
+}

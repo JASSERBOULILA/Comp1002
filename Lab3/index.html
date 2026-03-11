@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bug Bites • A Fun Tech Blog</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="css/grid.css">
+</head>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#">Bug Bites</a>
+
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Tutorials</a>
+        <a href="#">Reviews</a>
+        <a href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <article class="panel">
+      <p class="eyebrow">Featured Post</p>
+      <h1 class="title">Flexbox vs Grid: The “Pizza vs Tacos” Guide</h1>
+      <p class="meta">By Alex • 6 min read • CSS</p>
+
+      <img
+        class="hero"
+        src="https://picsum.photos/seed/bugbites/1200/500"
+        alt="A random tech-themed placeholder image"
+      />
+
+      <p>
+        If you’ve ever tried to line up elements on a page and felt like you were
+        herding cats, you’re not alone. The good news: modern CSS gives us two
+        excellent tools — Flexbox and Grid — and they’re not enemies.
+      </p>
+
+      <h2>When to use Flexbox</h2>
+      <ul>
+        <li>Navigation bars</li>
+        <li>Centering content</li>
+        <li>Simple rows/columns</li>
+      </ul>
+
+      <h2>When to use Grid</h2>
+      <ul>
+        <li>Page layouts (header/sidebar/main/footer)</li>
+        <li>Card galleries</li>
+        <li>Two-dimensional design</li>
+      </ul>
+
+      <blockquote>
+        “Flexbox is for aligning items. Grid is for building layouts.”
+      </blockquote>
+
+      <p>
+        The secret sauce is using them together. A common pattern: use Grid to
+        create the big page layout, then use Flexbox inside each section to
+        align and space items.
+      </p>
+
+      <a class="btn" href="#">Read the full tutorial →</a>
+    </article>
+
+    <aside class="panel sidebar">
+      <section>
+        <h2>About</h2>
+        <p>
+          Bug Bites is a friendly tech blog for new developers. We explain code
+          with memes, snacks, and fewer headaches.
+        </p>
+      </section>
+
+      <section>
+        <h2>Popular This Week</h2>
+        <ol class="list">
+          <li><a href="#">Why your CSS “does nothing” (and what to check)</a></li>
+          <li><a href="#">The 5 most common HTML mistakes</a></li>
+          <li><a href="#">Media queries: a survival guide</a></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Tags</h2>
+        <div class="tags">
+          <span class="tag">html</span>
+          <span class="tag">css</span>
+          <span class="tag">flexbox</span>
+          <span class="tag">grid</span>
+          <span class="tag">responsive</span>
+          <span class="tag">beginner</span>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <h2>Newsletter</h2>
+        <p>Get one helpful tip every Friday. No spam. No drama.</p>
+        <form>
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" />
+          <button type="button">Sign up</button>
+        </form>
+      </section>
+    </aside>
+  </main>
+
+  <section class="wrap cards">
+    <article class="card">
+      <p class="eyebrow">Card One</p>
+      <h3>rem vs em in 60 seconds</h3>
+      <p>Learn which unit scales best and why your font sizes sometimes “snowball.”</p>
+      <a href="#">Read →</a>
+    </article>
+
+    <article class="card">
+      <p class="eyebrow">Card Two</p>
+      <h3>3 ways to center a div (yes, really)</h3>
+      <p>Flexbox, Grid, and the “it’s 2026, please stop using margins” approach.</p>
+      <a href="#">Read →</a>
+    </article>
+
+    <article class="card">
+      <p class="eyebrow">Card Three</p>
+      <h3>Build a responsive navbar</h3>
+      <p>Use mobile-first CSS and progressively enhance at larger breakpoints.</p>
+      <a href="#">Try it →</a>
+    </article>
+    <article class="card">
+      <p class="eyebrow">Card Four</p>
+      <h3>rem vs em in 60 seconds</h3>
+      <p>Learn which unit scales best and why your font sizes sometimes “snowball.”</p>
+      <a href="#">Read →</a>
+    </article>
+
+    <article class="card">
+      <p class="eyebrow">Card Five</p>
+      <h3>3 ways to center a div (yes, really)</h3>
+      <p>Flexbox, Grid, and the “it’s 2026, please stop using margins” approach.</p>
+      <a href="#">Read →</a>
+    </article>
+
+    <article class="card">
+      <p class="eyebrow">Card Six</p>
+      <h3>Build a responsive navbar</h3>
+      <p>Use mobile-first CSS and progressively enhance at larger breakpoints.</p>
+      <a href="#">Try it →</a>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Bug Bites • Built with semantic HTML + CSS</p>
+      <p><a href="#">Privacy</a> • <a href="#">Contact</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
