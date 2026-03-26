@@ -33,6 +33,12 @@ button {
     cursor: pointer;
 }
 
+/* this for the error style in the welcome message */
+.error {
+    background: red;
+}
+
+/* styled the welcome message a bit*/
 #welcomeMessage {
     margin-top: 1rem;
     font-weight: bold;

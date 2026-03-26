@@ -12,11 +12,13 @@ welcomeForm.addEventListener('submit', function(event) {
 
     // validate the user name if it empty show enter your name and break the function
     if(!userName){
-        
-        welcomeMessage.style.color = 'red';
+        welcomeMessage.classList.add('error');
         welcomeMessage.textContent = 'enter your name';
         return;
     }
+    //reset the class we added before because the page cant refresh
+    welcomeMessage.classList.remove('error');
+
     // Display welcome message
     welcomeMessage.textContent = `Welcome, ${userName}!`;
 });
